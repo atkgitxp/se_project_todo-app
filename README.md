@@ -13,4 +13,4 @@ This project features HTML, CSS, Javascript importing and exporting of .js modul
 ## Deployment
 
 This project is deployed on GitHub Pages:
-[Simple ToDo App](https://atkgitxp.github.io/se_project_todo_app)
+[Simple ToDo App](https://atkgitxp.github.io/se_project_todo-app/)

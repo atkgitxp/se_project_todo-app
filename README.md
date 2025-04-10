@@ -1,17 +1,16 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+A ToDo app for the web!
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+This ToDo application lets users create tasks with a name, due date, checked or unchecked statuses, creation, and removal of those tasks.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+This project features HTML, CSS, Javascript importing and exporting of .js modules, classes, constructors, functions, form validation, form submission, form reset, checkboxes, delete butttons, and event listeners.
 
 ## Deployment
 
 This project is deployed on GitHub Pages:
-
-- ADD LINK HERE
+[Simple ToDo App](https://atkgitxp.github.io/se_project_todo_app)

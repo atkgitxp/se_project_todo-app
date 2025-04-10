@@ -9,8 +9,6 @@ export function updateCounter() {
 
   todoCount.textContent = todosCompleted; //x
   todoMaxCount.textContent = totalTodos; //y
-  console.log("Total todos:", totalTodos);
-  console.log("Completed todos:", todosCompleted);
 }
 class Todo {
   constructor(data, selector) {

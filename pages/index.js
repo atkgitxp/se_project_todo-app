@@ -6,7 +6,7 @@ import FormValidator from "../components/FormValidator.js";
 
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopup = document.querySelector("#add-todo-popup");
-const addTodoForm = addTodoPopup.querySelector(".popup__form");
+const addTodoForm = document.forms["add-todo-form"];
 const addTodoCloseBtn = addTodoPopup.querySelector(".popup__close");
 const todosList = document.querySelector(".todos__list");
 
@@ -22,13 +22,17 @@ function handleEsc(evt) {
 
 const openModal = (modal) => {
   modal.classList.add("popup_visible");
-
   document.addEventListener("keydown", handleEsc);
 };
 
 const closeModal = (modal) => {
   modal.classList.remove("popup_visible");
   document.removeEventListener("keydown", handleEsc);
+};
+
+const renderTodo = (item) => {
+  const todo = generateTodo(item);
+  todosList.append(todo);
 };
 
 const generateTodo = (data) => {
@@ -56,16 +60,15 @@ addTodoForm.addEventListener("submit", (evt) => {
   const id = uuidv4();
   const values = { name, date, id };
 
-  const todo = generateTodo(values);
-  todosList.append(todo);
+  renderTodo(values);
   updateCounter();
-  closeModal(addTodoPopup);
   newTodoValidator.resetValidation();
+  closeModal(addTodoPopup);
   console.log(`Created ToDo: "${name}" with ID: ${values.id}`);
 });
 
 initialTodos.forEach((item) => {
-  const todo = generateTodo(item);
-  todosList.append(todo);
-  updateCounter();
+  renderTodo(item);
 });
+
+updateCounter();

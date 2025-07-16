@@ -9,7 +9,6 @@ import PopupWithForm from "../components/PopupWithForm.js";
 const addTodoButton = document.querySelector(".button_action_add");
 const addTodoPopupEl = document.querySelector("#add-todo-popup");
 const addTodoForm = document.forms["add-todo-form"];
-const addTodoCloseBtn = addTodoPopupEl.querySelector(".popup__close");
 const todosList = document.querySelector(".todos__list");
 
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
@@ -30,7 +29,6 @@ const addTodoPopup = new PopupWithForm({
     const id = uuidv4();
 
     const values = { name, date, id };
-    section.addItem(addTodoPopupEl);
 
     renderTodo(values);
     todoCounter.updateTotal(true);

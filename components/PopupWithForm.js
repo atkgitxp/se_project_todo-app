@@ -7,7 +7,7 @@ class PopupWithForm extends Popup {
     this._handleFormSubmit = handleFormSubmit; //save handleFormSubmit to the this object
     this._inputList = this._popupForm.querySelectorAll(".popup__input");
   }
-  _getInputvalues() {
+  _getInputValues() {
     const values = { name: "", date: "" };
     this._inputList.forEach((input) => {
       // console.log(this._inputList);

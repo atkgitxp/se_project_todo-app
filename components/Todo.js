@@ -20,10 +20,6 @@ class Todo {
     this._todoDeleteBtn.addEventListener("click", () => {
       this._todoElement.remove();
       this._handleDelete(this._completed);
-
-      console.log(
-        `Removed ToDo: "${this._data.name}" with ID: ${this._data.id}`
-      );
     });
   }
   _generateCheckboxEl() {

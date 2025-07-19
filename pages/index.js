@@ -18,7 +18,7 @@ const addTodoPopup = new PopupWithForm({
   handleFormSubmit: (inputValues) => {
     const name = inputValues.name;
     const dateInput = inputValues.date;
-    console.log(name);
+
     const date = new Date(dateInput);
     date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
 
@@ -30,7 +30,6 @@ const addTodoPopup = new PopupWithForm({
     todoCounter.updateTotal(true);
     newTodoValidator.resetValidation();
     addTodoPopup.close();
-    console.log(`Created ToDo: "${name}" with ID: ${values.id}`);
   },
 });
 
@@ -43,7 +42,6 @@ const renderTodo = (item) => {
 
 function handleCheck(completed) {
   todoCounter.updateCompleted(completed);
-  console.log(todoCounter._completed);
 }
 
 function handleDelete(completed) {
